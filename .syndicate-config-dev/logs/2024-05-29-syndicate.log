@@ -1,0 +1,11 @@
+2024-05-29 18:12:46,071 [INFO] USER:petr_ishutin project.py:77:generate_project_structure LOG: Project task02 folder has been successfully created.
+2024-05-29 18:12:46,071 [INFO] USER:petr_ishutin helper.py:336:timed LOG: Stage project, elapsed time: 0:00:00.001041
+2024-05-29 18:14:22,291 [INFO] USER:petr_ishutin s3_resource.py:40:validate_bucket_name LOG: Starting validating bucket name 'syndicate-education-platform-custom-sandbox-artifacts-sbox01'
+2024-05-29 18:14:22,292 [INFO] USER:petr_ishutin s3_resource.py:73:validate_bucket_name LOG: Finished validating bucket name 'syndicate-education-platform-custom-sandbox-artifacts-sbox01'
+2024-05-29 18:14:22,889 [WARNING] USER:petr_ishutin generator.py:76:generate_configuration_files LOG: The config_path property is not specified. The working directory is used
+2024-05-29 18:14:22,890 [WARNING] USER:petr_ishutin generator.py:93:generate_configuration_files LOG: The "project_path" property is not specified. The working directory will be used as a project path. To change the path, edit the syndicate.yml by path /Users/petr_ishutin/PycharmProjects/sandbox/task02/.syndicate-config-dev
+2024-05-29 18:14:22,894 [INFO] USER:petr_ishutin generator.py:155:generate_configuration_files LOG: Syndicate initialization has been completed. 
+Set SDCT_CONF:
+Unix: export SDCT_CONF="/Users/petr_ishutin/PycharmProjects/sandbox/task02/.syndicate-config-dev"
+Windows: setx SDCT_CONF /Users/petr_ishutin/PycharmProjects/sandbox/task02/.syndicate-config-dev
+2024-05-29 18:14:22,896 [INFO] USER:petr_ishutin helper.py:336:timed LOG: Stage config, elapsed time: 0:00:00.603923
