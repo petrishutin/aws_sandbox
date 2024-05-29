@@ -1,6 +1,6 @@
 import unittest
 import importlib
-from tests import ImportFromSourceContext
+from task01.tests import ImportFromSourceContext
 
 with ImportFromSourceContext():
     LAMBDA_HANDLER = importlib.import_module('lambdas.hello_world.handler')

@@ -1,4 +1,4 @@
-from tests.test_hello_world import HelloWorldLambdaTestCase
+from task01.tests.test_hello_world import HelloWorldLambdaTestCase
 
 
 class TestSuccess(HelloWorldLambdaTestCase):
