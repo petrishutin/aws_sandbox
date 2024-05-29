@@ -1,10 +1,10 @@
 from commons.log_helper import get_logger
 from commons.abstract_lambda import AbstractLambda
 
-_LOG = get_logger('Hello-handler')
+_LOG = get_logger('HelloWorld-handler')
 
 
-class Hello(AbstractLambda):
+class HelloWorld(AbstractLambda):
 
     def validate_request(self, event) -> dict:
         pass
@@ -19,7 +19,7 @@ class Hello(AbstractLambda):
         }
 
 
-HANDLER = Hello()
+HANDLER = HelloWorld()
 
 
 def lambda_handler(event, context):
