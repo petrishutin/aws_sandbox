@@ -8,16 +8,22 @@ class HelloWorld(AbstractLambda):
 
     def validate_request(self, event) -> dict:
         pass
-        
+
     def handle_request(self, event, context):
         """
         Explain incoming event here
         """
-        return {
-            "statusCode": 200,
-            "message": "Hello from Lambda"
-        }
-    
+        if event['resource'] == '/hello':
+            return {
+                "statusCode": 200,
+                "message": "Hello from Lambda"
+            }
+        else:
+            return {
+                "statusCode": 400,
+                "message": f"Bad request syntax or unsupported method. Request path: {event['resource']}. HTTP method: {event['httpMethod']}"
+            }
+
 
 HANDLER = HelloWorld()
 

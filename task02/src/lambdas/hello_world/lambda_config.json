@@ -13,7 +13,17 @@
   "env_variables": {},
   "publish_version": false,
   "url_config": {
-    "auth_type": "NONE"
+    "auth_type": "NONE",
+    "cors": {
+            "allow_credentials": false,
+            "allow_headers": [],
+            "allow_methods": [],
+            "allow_origins": [],
+            "expose_headers": [],
+            "max_age": 0
+        },
+        "principal": "string",
+        "source_arn": "string"
   },
   "ephemeral_storage": 512,
   "logs_expiration": "${logs_expiration}"
