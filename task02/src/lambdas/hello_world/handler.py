@@ -32,7 +32,7 @@ HANDLER = HelloWorld()
 
 
 def lambda_handler(event, context):
-    if event['rawPath'] == '/hello' and event['httpMethod'] == 'GET':
+    if event['rawPath'] == '/hello' and event['requestContext']['http']['method'] == 'GET':
         return {
             "statusCode": 200,
             "body": json.dumps({
@@ -43,6 +43,6 @@ def lambda_handler(event, context):
         return {
             "statusCode": 400,
             "body": json.dumps({
-                "message": f"Bad request syntax or unsupported method. Request path: {event['rawPath']}. HTTP method: {event['httpMethod']}"
+                "message": f"Bad request syntax or unsupported method. Request path: {event['rawPath']}. HTTP method: {event['requestContext']['http']['method']}"
             })
         }
