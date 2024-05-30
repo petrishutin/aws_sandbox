@@ -32,4 +32,17 @@ HANDLER = HelloWorld()
 
 
 def lambda_handler(event, context):
-    return HANDLER.lambda_handler(event=event, context=context)
+    if event['resource'] == '/hello' and event['httpMethod'] == 'GET':
+        return {
+            "statusCode": 200,
+            "body": json.dumps({
+                "message": "Hello from Lambda"
+            })
+        }
+    else:
+        return {
+            "statusCode": 400,
+            "body": json.dumps({
+                "message": f"Bad request syntax or unsupported method. Request path: {event['resource']}. HTTP method: {event['httpMethod']}"
+            })
+        }
