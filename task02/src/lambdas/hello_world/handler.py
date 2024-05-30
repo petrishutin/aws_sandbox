@@ -13,7 +13,7 @@ class HelloWorld(AbstractLambda):
         """
         Explain incoming event here
         """
-        if event['path'] == '/hello' and event['httpMethod'] == 'GET':
+        if event['rawPath'] == '/hello' and event['httpMethod'] == 'GET':
             return {
                 "statusCode": 200,
                 "message": "Hello from Lambda"
@@ -21,7 +21,7 @@ class HelloWorld(AbstractLambda):
         else:
             return {
                 "statusCode": 400,
-                "message": f"Bad request syntax or unsupported method. Request path: {event['path']}. HTTP method: {event['httpMethod']}"
+                "message": f"Bad request syntax or unsupported method. Request path: {event['rawPath']}. HTTP method: {event['httpMethod']}"
             }
 
 
