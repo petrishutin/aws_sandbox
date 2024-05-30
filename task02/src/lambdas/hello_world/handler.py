@@ -13,7 +13,7 @@ class HelloWorld(AbstractLambda):
         """
         Explain incoming event here
         """
-        if event['resource'] == '/hello':
+        if event['resource'] == '/hello' and event['httpMethod'] == 'GET':
             return {
                 "statusCode": 200,
                 "message": "Hello from Lambda"
